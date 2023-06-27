@@ -1,0 +1,12 @@
+<%- include('partials/header'); -%>
+<h1>HOME</h1>
+<p><%=content1%></p>
+<!-- <%for(var i=0;i<item.length;++i){%>
+    <h1><%=item[i].title%></h1>
+    <p><%=item[i].body%></p>
+<%}%> -->
+<%item.forEach(function(itemm){%>
+    <h1><%=itemm.title%></h1>
+    <p><%=itemm.body.substring(0,100)%>...<a href="posts/<%=itemm.title%>">Read here</a></p>
+<%});%>
+<%- include('partials/footer'); -%>
